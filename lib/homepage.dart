@@ -4,6 +4,7 @@ import 'package:google_nav_bar/google_nav_bar.dart';
 import 'akun.dart';
 import 'banjir.dart';
 import 'dashboard.dart';
+import 'notifikasi.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -20,11 +21,18 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: _getSelectedScreen(_selectedIndex),
       bottomNavigationBar: Container(
-        color: const Color(0xFF86A7FC),
+        decoration: const BoxDecoration(
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(10),
+            topRight: Radius.circular(10),
+          ),
+        color: Color(0xFF86A7FC),
+        ),
         child: Padding(
           padding: const EdgeInsets.symmetric(
             horizontal: 15.0,
             vertical: 10),
+          
           child: GNav(
           backgroundColor: const Color(0xFF86A7FC),
           color: Colors.white,
@@ -40,6 +48,10 @@ class _HomePageState extends State<HomePage> {
             GButton(
               icon: Icons.warning,
               text: 'Banjir'
+              ),
+            GButton(
+              icon: Icons.notifications,
+              text: 'Notifikasi'
               ),
             GButton(
               icon: Icons.person,
@@ -65,6 +77,8 @@ class _HomePageState extends State<HomePage> {
       case 1:
         return const Banjir();
       case 2:
+        return const Notifikasi();
+      case 3:
         return const Akun();
       default:
         return const Dashboard();
