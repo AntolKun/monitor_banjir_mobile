@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:monitor_banjir/constants.dart';
 
 class DiscountBanner extends StatelessWidget {
   const DiscountBanner({
@@ -15,16 +16,21 @@ class DiscountBanner extends StatelessWidget {
         vertical: 16,
       ),
       decoration: BoxDecoration(
-        color: const Color(0xFF4A3298),
+        gradient: kPrimaryGradientColor,
         borderRadius: BorderRadius.circular(20),
       ),
-      child: const Text.rich(
+      child: const SizedBox(
+        height: 150,
+        child: Text.rich(
         TextSpan(
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(
+            color: Colors.black, 
+            fontWeight: FontWeight.bold
+            ),
           children: [
             TextSpan(text: "A Summer Surpise\n"),
             TextSpan(
-              text: "Cashback 20%",
+              text: "Cashback 20%\n",
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
@@ -33,6 +39,7 @@ class DiscountBanner extends StatelessWidget {
           ],
         ),
       ),
+      )
     );
   }
 }
