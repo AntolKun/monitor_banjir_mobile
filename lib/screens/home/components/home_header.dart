@@ -17,11 +17,11 @@ class HomeHeader extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           // const Expanded(child: SearchField()),
-          const SizedBox(width: 16),
-          IconBtnWithCounter(
-            svgSrc: "assets/icons/Cart Icon.svg",
-            press: () => Navigator.pushNamed(context, CartScreen.routeName),
-          ),
+          // const SizedBox(width: 16),
+          // IconBtnWithCounter(
+          //   svgSrc: "assets/icons/Undo.svg",
+          //   press: () => Navigator.pushNamed(context, CartScreen.routeName),
+          // ),
           const SizedBox(width: 8),
           IconBtnWithCounter(
             svgSrc: "assets/icons/Bell.svg",

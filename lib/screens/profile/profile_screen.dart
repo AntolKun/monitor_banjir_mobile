@@ -10,13 +10,13 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Profile"),
-      ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(vertical: 20),
         child: Column(
           children: [
+            const SizedBox(
+              height: 100
+            ),
             // const ProfilePic(),
             // const SizedBox(height: 20),
             // ProfileMenu(
