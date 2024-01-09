@@ -1,18 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:monitor_banjir/homepage.dart';
+import 'package:monitor_banjir/screens/splash/splash_screen.dart';
+
+import 'routes.dart';
+import 'theme.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-  
+  const MyApp({super.key});
+
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage()
+      title: 'Aplikasi Monitoring Banjir',
+      theme: AppTheme.lightTheme(context),
+      initialRoute: SplashScreen.routeName,
+      routes: routes,
     );
   }
 }
