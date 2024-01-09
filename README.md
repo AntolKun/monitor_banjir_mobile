@@ -1,6 +1,6 @@
-# flutter_project
+# Monitoring Banjir
 
-TA nya Mawang
+Aplikasi Monitoring Banjir Versi Mobile - Dalam Pengembangan
 
 ## Getting Started
 
