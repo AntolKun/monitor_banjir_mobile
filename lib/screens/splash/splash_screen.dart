@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+// import 'package:monitor_banjir/screens/home/home_screen.dart';
+import 'package:monitor_banjir/screens/init_screen.dart';
 
 import '../../constants.dart';
-import '../sign_in/sign_in_screen.dart';
 import 'components/splash_content.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -18,15 +19,15 @@ class _SplashScreenState extends State<SplashScreen> {
   List<Map<String, String>> splashData = [
     {
       "text": "Selamat Datang Di Aplikasi Monitoring Banjir",
-      "image": "assets/images/splash_1.png"
+      "image": "assets/images/la-flat.png"
     },
     {
       "text": "Blaaahhh",
-      "image": "assets/images/splash_2.png"
+      "image": "assets/images/city-sp.png"
     },
     {
       "text": "Welllleeeee",
-      "image": "assets/images/splash_3.png"
+      "image": "assets/images/world.png"
     },
   ];
   @override
@@ -80,9 +81,9 @@ class _SplashScreenState extends State<SplashScreen> {
                       const Spacer(flex: 3),
                       ElevatedButton(
                         onPressed: () {
-                          Navigator.pushNamed(context, SignInScreen.routeName);
+                          Navigator.pushNamed(context, InitScreen.routeName);
                         },
-                        child: const Text("Continue"),
+                        child: const Text("Lanjutkan"),
                       ),
                       const Spacer(),
                     ],
