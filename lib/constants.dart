@@ -7,6 +7,7 @@ const kPrimaryGradientColor = LinearGradient(
   end: Alignment.bottomRight,
   colors: [Color(0xFF86A7FC), Color(0xFFF3CCF3)],
 );
+const kPrimaryColorSoft = Color(0xFF86A7FC);
 const kSecondaryColor = Color(0xFF979797);
 const kTextColor = Colors.black;
 

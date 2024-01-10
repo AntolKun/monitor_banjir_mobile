@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:monitor_banjir/constants.dart';
 
 // import 'components/categories.dart';
 import 'components/discount_banner.dart';
@@ -12,8 +13,19 @@ class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: SafeArea(
+    return Scaffold(
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        centerTitle: true,
+        backgroundColor: kPrimaryColorSoft,
+        shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(
+          bottom: Radius.circular(15),
+        ),
+      ),
+        title: const Text("Dashboard", style: TextStyle(fontSize: 20),),
+      ),
+      body: const SafeArea(
         child: SingleChildScrollView(
           padding: EdgeInsets.symmetric(vertical: 16),
           child: Column(

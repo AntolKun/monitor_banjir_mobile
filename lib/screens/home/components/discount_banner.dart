@@ -21,24 +21,38 @@ class DiscountBanner extends StatelessWidget {
       ),
       child: const SizedBox(
         height: 150,
-        child: Text.rich(
-        TextSpan(
-          style: TextStyle(
-            color: Colors.black, 
-            fontWeight: FontWeight.bold
-            ),
+        child: Row(
           children: [
-            TextSpan(text: "A Summer Surpise\n"),
-            TextSpan(
-              text: "Cashback 20%\n",
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
+            SizedBox(width: 30),
+            Column(
+              children: [
+                Text.rich(
+                  TextSpan(
+                    text: "Banjir",
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold
+                    )
+                  )
+                )
+              ]
             ),
+            SizedBox(width: 150),
+            Column(children: [
+              Text.rich(
+                  TextSpan(
+                    text: "Cuaca",
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold
+                    )
+                  )
+                ),
+              ],
+            ),
+            SizedBox(width: 30),
           ],
-        ),
-      ),
+        )
       )
     );
   }
