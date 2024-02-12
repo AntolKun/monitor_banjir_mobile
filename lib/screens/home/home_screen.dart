@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:monitor_banjir/constants.dart';
 
-// import 'components/categories.dart';
 import 'components/info_banner.dart';
 import 'components/home_header.dart';
-// import 'components/popular_product.dart';
-import 'components/special_offers.dart';
 import 'components/weather.dart';
 
 
