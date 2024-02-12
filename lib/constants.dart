@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+// ignore: constant_identifier_names
+const OPENWEATHER_API_KEY =  "b7616918af2d8bc0a3efb656ca815a77";
 const kPrimaryColor = Color(0xFF4942E4);
 const kPrimaryLightColor = Color(0xFFFFECDF);
 const kPrimaryGradientColor = LinearGradient(

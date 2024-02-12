@@ -22,7 +22,6 @@ class HomeHeader extends StatelessWidget {
           //   svgSrc: "assets/icons/Undo.svg",
           //   press: () => Navigator.pushNamed(context, CartScreen.routeName),
           // ),
-          SizedBox(width: 8)
         ],
       ),
     );

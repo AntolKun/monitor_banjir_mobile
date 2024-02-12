@@ -42,6 +42,8 @@ dependencies:
   geolocator: ^8.0.1
   geocoding: ^2.1.1
   lottie: ^3.0.0
+  weather: ^3.1.1
+  intl: ^0.19.0
 
 dev_dependencies:
   flutter_test:
@@ -91,6 +93,14 @@ flutter:
           weight: 700
         - asset: assets/fonts/muli/Muli-Light.ttf
           weight: 300
+    - family: Kanit
+      fonts:
+        - asset: assets/fonts/kanit/Kanit-Regular.ttf
+        - asset: assets/fonts/kanit/Kanit-Bold.ttf
+        - asset: assets/fonts/kanit/Kanit-Light.ttf
+    - family: Bebas Neue
+      fonts:
+        - asset: assets/fonts/bebas_neue/BebasNeue-Regular.ttf
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf

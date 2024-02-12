@@ -1,10 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" android:maxSdkVersion="34"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" android:maxSdkVersion="34"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" android:maxSdkVersion="34"/>
-    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" android:maxSdkVersion="34"/>
-    <uses-permission android:name="android.permissio.WAKE_LOCK" android:maxSdkVersion="34"/>
-    <uses-permission android:name="android.hardware.location.gps" android:maxSdkVersion="34"/> 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <uses-permission android:name="android.permissio.WAKE_LOCK"/>
+    <uses-permission android:name="android.hardware.location.gps"/> 
 
     <application
         android:label="flutter_project"

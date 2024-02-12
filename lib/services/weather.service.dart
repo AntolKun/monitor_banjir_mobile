@@ -17,8 +17,10 @@ class WeatherService {
     final response = await http.get(Uri.parse('$BASE_URL?q=$cityName&appid=$apiKey&units=metric'));
 
     if (response.statusCode == 200) {
+      print(response.body);
       return Weather.fromJson(jsonDecode(response.body));
     } else {
+      print("Error Lokasi Cuaca");
       throw Exception('Failed to load weather');
     }
   }
@@ -26,6 +28,7 @@ class WeatherService {
   Future<String> getCurrentCity() async {
     LocationPermission permission = await Geolocator.checkPermission();
     if (permission == LocationPermission.denied) {
+      print("Ijin Lokasi Ga Dikasih");
       permission = await Geolocator.requestPermission();
     }
 

@@ -3,16 +3,16 @@ import 'package:monitor_banjir/constants.dart';
 
 // import 'components/categories.dart';
 import 'components/info_banner.dart';
-import 'components/home_header.dart';
+import 'components/peringatan_header.dart';
 // import 'components/popular_product.dart';
 import 'components/special_offers.dart';
 import 'components/weather.dart';
 
 
-class HomeScreen extends StatelessWidget {
-  static String routeName = "/home";
+class PeringatanScreen extends StatelessWidget {
+  static String routeName = "/peringatan";
 
-  const HomeScreen({super.key});
+  const PeringatanScreen({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +25,7 @@ class HomeScreen extends StatelessWidget {
           bottom: Radius.circular(15),
         ),
       ),
-        title: const Text("Dashboard", style: TextStyle(fontSize: 20),),
+        title: const Text("Peringatan", style: TextStyle(fontSize: 20),),
       ),
       body: const SafeArea(
         child: SingleChildScrollView(
