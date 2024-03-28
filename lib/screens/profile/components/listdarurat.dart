@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:monitor_banjir/constants.dart';
 
-class ListDataBanjir extends StatelessWidget {
-  ListDataBanjir({
+class ListDarurat extends StatelessWidget {
+  ListDarurat({
     Key? key,
   }) : super(key: key);
   String assetName = "assets/icons/png/marker.png";
@@ -16,20 +16,21 @@ class ListDataBanjir extends StatelessWidget {
       physics: const ScrollPhysics(),
       children: [
         _listData(
-            "assets/icons/Redmarker.svg",
-            "Lokasi  : Jl. ZA. Pagar Alam",
-            "Ketinggian : 30 cm",
-            "Status        : Merah (tidak bisa dilewati)"),
+            "assets/icons/police.svg",
+            "Polisi",
+            "No. Telp : 110",),
         _listData(
-            "assets/icons/Redmarker.svg",
-            "Lokasi  : Jl. ZA. Pagar Alam",
-            "Ketinggian : 30 cm",
-            "Status        : Merah (tidak bisa dilewati)"),
+            "assets/icons/ambulance.svg",
+            "Ambulans",
+            "No. Telp : 8247737",),
         _listData(
-            "assets/icons/Redmarker.svg",
-            "Lokasi  : Jl. ZA. Pagar Alam",
-            "Ketinggian : 30 cm",
-            "Status        : Merah (tidak bisa dilewati)"),
+            "assets/icons/firetruck.svg",
+            "Pemadam Kebakaran",
+            "No. Telp : 824737624737",),
+        _listData(
+            "assets/icons/bpbd.svg",
+            "BPBD (Badan Penanggulangan Bencana Daerah)",
+            "No. Telp : 110",),
       ],
     );
   }
@@ -38,7 +39,6 @@ class ListDataBanjir extends StatelessWidget {
     String icon,
     text,
     text2,
-    text3,
   ) {
     return Container(
       margin: const EdgeInsets.all(10.0),
@@ -90,7 +90,7 @@ class ListDataBanjir extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    alignment: Alignment.center,
+                    alignment: Alignment.topLeft,
                     width: 250,
                     child: Text(text,
                         overflow: TextOverflow.ellipsis,
@@ -100,11 +100,6 @@ class ListDataBanjir extends StatelessWidget {
                             fontSize: 18)),
                   ),
                   Text(text2,
-                      style: const TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 13)),
-                  Text(text3,
                       style: const TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.bold,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 // import 'package:monitor_banjir/screens/home/home_screen.dart';
-import 'package:monitor_banjir/screens/init_screen.dart';
+// import 'package:monitor_banjir/screens/init_screen.dart';
+import 'package:monitor_banjir/screens/sign_in/sign_in_screen.dart';
 
 import '../../constants.dart';
 import 'components/splash_content.dart';
@@ -81,7 +82,7 @@ class _SplashScreenState extends State<SplashScreen> {
                       const Spacer(flex: 3),
                       ElevatedButton(
                         onPressed: () {
-                          Navigator.pushNamed(context, InitScreen.routeName);
+                          Navigator.pushNamed(context, SignInScreen.routeName);
                         },
                         child: const Text("Lanjutkan"),
                       ),
