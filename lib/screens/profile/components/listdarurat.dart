@@ -91,19 +91,19 @@ class ListDarurat extends StatelessWidget {
                 children: [
                   Container(
                     alignment: Alignment.topLeft,
-                    width: 250,
+                    width: 210,
                     child: Text(text,
                         overflow: TextOverflow.ellipsis,
                         style: const TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.bold,
-                            fontSize: 18)),
+                            fontSize: 13)),
                   ),
                   Text(text2,
                       style: const TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
-                          fontSize: 13)),
+                          fontSize: 9)),
                 ],
               ),
             ),

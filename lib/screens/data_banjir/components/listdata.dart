@@ -81,7 +81,7 @@ class ListDataBanjir extends StatelessWidget {
               width: 40,
               height: 40,
             ),
-            const SizedBox(width: 40),
+            const SizedBox(width: 10),
             Container(
               alignment: Alignment.center,
               // padding: const EdgeInsets.all(10.0),
@@ -90,25 +90,35 @@ class ListDataBanjir extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    alignment: Alignment.center,
-                    width: 250,
-                    child: Text(text,
-                        overflow: TextOverflow.ellipsis,
-                        style: const TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18)),
+                    alignment: Alignment.topLeft,
+                    width: 210,
+                    child: Text(
+                      text,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15,
+                      ),
+                    ),
                   ),
-                  Text(text2,
-                      style: const TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 13)),
-                  Text(text3,
-                      style: const TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 13)),
+                  Text(
+                    text2,
+                    style: const TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 13,
+                    ),
+                  ),
+                  Text(
+                    text3,
+                    style: const TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 9,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ),
                 ],
               ),
             ),

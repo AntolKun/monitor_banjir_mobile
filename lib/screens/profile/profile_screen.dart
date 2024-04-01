@@ -48,9 +48,10 @@ class ProfileScreen extends StatelessWidget {
               children: [
                 Container(
                   margin: const EdgeInsets.only(left: 10, top: 10),
+                  alignment: Alignment.center,
                   child: const Text("Darurat Hubungi : ",
                       style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                          TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
                 ),
                 ListDarurat(),
               ],
