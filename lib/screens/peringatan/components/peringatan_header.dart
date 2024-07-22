@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class HomeHeader extends StatelessWidget {
-  const HomeHeader({
+class PeringatanHeader extends StatelessWidget {
+  const PeringatanHeader({
     Key? key,
   }) : super(key: key);
 
@@ -10,7 +10,7 @@ class HomeHeader extends StatelessWidget {
     return const Padding(
       padding: EdgeInsets.symmetric(horizontal: 20),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           // const Expanded(child: SearchField()),
           // const SizedBox(width: 16),

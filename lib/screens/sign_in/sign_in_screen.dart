@@ -23,15 +23,16 @@ class SignInScreen extends StatelessWidget {
                 children: [
                   SizedBox(height: 16),
                   Text(
-                    "Welcome Back",
+                    "Selamat Datang",
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
+                  SizedBox(height: 10),
                   Text(
-                    "Sign in with your email and password  \nor continue with social media",
+                    "Masuk dengan menggunakan \nemail dan password",
                     textAlign: TextAlign.center,
                   ),
                   SizedBox(height: 16),

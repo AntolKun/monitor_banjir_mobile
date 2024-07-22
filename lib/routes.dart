@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+import 'package:monitor_banjir/screens/call_center/call_center_screen.dart';
 import 'package:monitor_banjir/screens/products/products_screen.dart';
 
 import 'screens/cart/cart_screen.dart';
@@ -30,4 +31,5 @@ final Map<String, WidgetBuilder> routes = {
   DetailsScreen.routeName: (context) => const DetailsScreen(),
   CartScreen.routeName: (context) => const CartScreen(),
   ProfileScreen.routeName: (context) => const ProfileScreen(),
+  CallCenterScreen.routeName: (context) => const CallCenterScreen(),
 };

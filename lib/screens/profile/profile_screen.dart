@@ -33,11 +33,6 @@ class ProfileScreen extends StatelessWidget {
               icon: "assets/icons/Settings.svg",
               press: () {},
             ),
-            // ProfileMenu(
-            //   text: "Help Center",
-            //   icon: "assets/icons/Question mark.svg",
-            //   press: () {},
-            // ),
             ProfileMenu(
               text: "Log Out",
               icon: "assets/icons/Log out.svg",
@@ -49,9 +44,10 @@ class ProfileScreen extends StatelessWidget {
                 Container(
                   margin: const EdgeInsets.only(left: 10, top: 10),
                   alignment: Alignment.center,
-                  child: const Text("Darurat Hubungi : ",
-                      style:
-                          TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+                  child: const Text(
+                    "Darurat Hubungi : ",
+                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                  ),
                 ),
                 ListDarurat(),
               ],

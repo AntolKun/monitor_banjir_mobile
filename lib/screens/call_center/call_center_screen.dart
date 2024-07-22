@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:monitor_banjir/constants.dart';
-import 'package:monitor_banjir/screens/peringatan/components/maps_page.dart';
 
-class PeringatanScreen extends StatelessWidget {
-  static String routeName = "/peringatan";
+class CallCenterScreen extends StatelessWidget {
+  static String routeName = "/call_center";
 
-  const PeringatanScreen({super.key});
+  const CallCenterScreen({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,14 +18,22 @@ class PeringatanScreen extends StatelessWidget {
           ),
         ),
         title: const Text(
-          "Peta Banjir",
+          "Call Center",
           style: TextStyle(
             color: Colors.white,
             fontSize: 20,
           ),
         ),
       ),
-      body: const MapsPage(),
+      body: ListView(
+        shrinkWrap: true,
+        physics: const ScrollPhysics(),
+        children: [
+          Container(
+            child: Text("quarter  sd"),
+          )
+        ],
+      ),
     );
   }
 }

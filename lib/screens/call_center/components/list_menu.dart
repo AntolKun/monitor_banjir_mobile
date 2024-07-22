@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:monitor_banjir/constants.dart';
 
-class ListDarurat extends StatelessWidget {
-  ListDarurat({
+class ListMenuCall extends StatelessWidget {
+  ListMenuCall({
     Key? key,
   }) : super(key: key);
   String assetName = "assets/icons/png/marker.png";
@@ -16,21 +16,25 @@ class ListDarurat extends StatelessWidget {
       physics: const ScrollPhysics(),
       children: [
         _listData(
-            "assets/icons/police.svg",
-            "Polisi",
-            "No. Telp : 110",),
+          "assets/icons/police.svg",
+          "Polisi",
+          "No. Telp : 110",
+        ),
         _listData(
-            "assets/icons/ambulance.svg",
-            "Ambulans",
-            "No. Telp : 8247737",),
+          "assets/icons/ambulance.svg",
+          "Ambulans",
+          "No. Telp : 8247737",
+        ),
         _listData(
-            "assets/icons/firetruck.svg",
-            "Pemadam Kebakaran",
-            "No. Telp : 824737624737",),
+          "assets/icons/firetruck.svg",
+          "Pemadam Kebakaran",
+          "No. Telp : 824737624737",
+        ),
         _listData(
-            "assets/icons/bpbd.svg",
-            "BPBD (Badan Penanggulangan Bencana Daerah)",
-            "No. Telp : 110",),
+          "assets/icons/bpbd.svg",
+          "BPBD (Badan Penanggulangan Bencana Daerah)",
+          "No. Telp : 110",
+        ),
       ],
     );
   }
@@ -41,7 +45,7 @@ class ListDarurat extends StatelessWidget {
     text2,
   ) {
     return Container(
-      margin: const EdgeInsets.only(bottom: 15, right:15, left: 15),
+      margin: const EdgeInsets.only(bottom: 15, right: 15, left: 15),
       // padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       decoration: const BoxDecoration(
         color: Color(0xFFFFFFFF),
@@ -88,14 +92,12 @@ class ListDarurat extends StatelessWidget {
                     width: 210,
                     child: Text(text,
                         overflow: TextOverflow.ellipsis,
-                        style: const TextStyle(
-                            color: Colors.black,
-                            fontSize: 15)),
+                        style:
+                            const TextStyle(color: Colors.black, fontSize: 15)),
                   ),
                   Text(text2,
-                      style: const TextStyle(
-                          color: Colors.black,
-                          fontSize: 11)),
+                      style:
+                          const TextStyle(color: Colors.black, fontSize: 11)),
                 ],
               ),
             ),
