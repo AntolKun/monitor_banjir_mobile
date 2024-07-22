@@ -103,8 +103,8 @@
 // }
 
 import 'dart:async';
-import 'dart:convert';
-import 'dart:typed_data';
+// import 'dart:convert';
+// import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -154,19 +154,24 @@ class _MapsPageState extends State<MapsPage> {
 
         setState(() {
           for (var item in data['data']) {
+            final sensorId = item['sensorid'].toString().toUpperCase();
             final marker = Marker(
-              markerId: MarkerId(item['sensorid']),
+              markerId: MarkerId(sensorId),
               position: LatLng(
                 double.parse(item['latitude']),
                 double.parse(item['longitude']),
               ),
-              infoWindow: InfoWindow(
-                title: item['sensorid'],
-                snippet:
-                    'Water Level: ${item['water_level']}, Kondisi: ${item['kondisi']}',
-              ),
+              onTap: () {
+                _customInfoWindowController.addInfoWindow!(
+                  _buildCustomInfoWindow(item),
+                  LatLng(
+                    double.parse(item['latitude']),
+                    double.parse(item['longitude']),
+                  ),
+                );
+              },
             );
-            _markers[item['sensorid']] = marker;
+            _markers[sensorId] = marker;
           }
         });
       } else {
@@ -178,15 +183,54 @@ class _MapsPageState extends State<MapsPage> {
     }
   }
 
-  Future<BitmapDescriptor> _getAssetIcon(
-      BuildContext context, String icon) async {
-    final Completer<BitmapDescriptor> bitmapIcon =
-        Completer<BitmapDescriptor>();
-    final ByteData byteData = await DefaultAssetBundle.of(context).load(icon);
-    final Uint8List bytes = byteData.buffer.asUint8List();
-    bitmapIcon.complete(BitmapDescriptor.fromBytes(bytes));
-
-    return await bitmapIcon.future;
+  Widget _buildCustomInfoWindow(dynamic item) {
+    final sensorId = item['sensorid'].toString().toUpperCase();
+    return Container(
+      padding: const EdgeInsets.all(15.0),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(15.0),
+        color: Colors.white,
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SizedBox(
+            width: double.infinity,
+            height: 130,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10.0),
+              child: Image.network(
+                'https://images.unsplash.com/photo-1606089397043-89c1758008e0?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDEyMHx6c01WalRMU2tlUXx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60',
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 15,
+          ),
+          Container(
+            alignment: Alignment.center,
+            child: Text(
+              sensorId,
+              style: const TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20),
+            ),
+          ),
+          const SizedBox(
+            height: 5,
+          ),
+          Container(
+            alignment: Alignment.center,
+            child: Text(
+              'Water Level: ${item['water_level']}, Kondisi: ${item['kondisi']}',
+              style: TextStyle(color: Colors.grey.shade600, fontSize: 14),
+            ),
+          )
+        ],
+      ),
+    );
   }
 
   @override
@@ -216,15 +260,11 @@ class _MapsPageState extends State<MapsPage> {
         ),
         CustomInfoWindow(
           controller: _customInfoWindowController,
-          height: 75,
-          width: 150,
+          height: 250,
+          width: 300,
           offset: 50,
         ),
       ],
     );
   }
 }
-
-
-
-

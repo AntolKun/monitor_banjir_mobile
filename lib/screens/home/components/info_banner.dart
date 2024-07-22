@@ -11,7 +11,7 @@ class DiscountBanner extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(onTap: () {
       Navigator.push(context,
-          MaterialPageRoute(builder: (context) => DataBanjirScreen()));
+          MaterialPageRoute(builder: (context) => const DataBanjirScreen()));
     },
       child: Container(
         width: double.infinity,
