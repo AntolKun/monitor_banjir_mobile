@@ -34,7 +34,7 @@ class DataBanjirScreen extends StatelessWidget {
                 margin: const EdgeInsets.only(left: 10),
                 child: const Text("Titik data banjir : ", style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
               ),
-              ListDataBanjir(),
+              const ListDataBanjir(),
             ],
           ),
         ),

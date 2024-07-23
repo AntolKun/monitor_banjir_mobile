@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:monitor_banjir/constants.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -48,8 +49,8 @@ class DetailDataBanjirPage extends StatelessWidget {
             Image.asset(
               'assets/images/banjir.png',
               alignment: Alignment.center,
-              width: 50,
-              height: 50,
+              width: 100,
+              height: 100,
             ),
             const SizedBox(
               height: 20,
@@ -57,34 +58,133 @@ class DetailDataBanjirPage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
-                  width: 15,
-                  height: 15,
-                  decoration: const BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Colors.red,
-                  ),
-                ),
-                const SizedBox(
-                  width: 10,
-                ),
-                Text(
-                  "Status: ${data['kondisi']}",
-                  style: const TextStyle(
-                    fontSize: 16,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
+                Column(
+                  children: [
+                    const Text(
+                      "Lokasi Banjir :",
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      "${data['sensorid'].toUpperCase()}",
+                      style: const TextStyle(
+                        fontSize: 16,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    const SizedBox(height: 10),
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 20,
+                        vertical: 16,
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      alignment: Alignment.center,
+                      child: GestureDetector(
+                        onTap: () {
+                          String url =
+                              'https://maps.google.com/?q=${data['lokasi']}';
+                          _launchURL(url);
+                        },
+                        child: Row(
+                          children: [
+                            SvgPicture.asset(
+                              'assets/icons/Redmarker.svg',
+                              alignment: Alignment.center,
+                              width: 15,
+                              height: 15,
+                            ),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            Text(
+                              "${data['lokasi']}",
+                              style: const TextStyle(
+                                fontSize: 10,
+                                color: Colors.blue,
+                                decoration: TextDecoration.underline,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 10),
+                    const Text(
+                      "Ketinggian Banjir",
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    const SizedBox(height: 10),
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 20,
+                        vertical: 16,
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      alignment: Alignment.center,
+                      child: Row(
+                        children: [
+                          Text(
+                            "${data['water_level']} CM",
+                            style: const TextStyle(
+                                fontSize: 20,
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 10),
+                    const Text(
+                      "Status Banjir",
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    const SizedBox(height: 10),
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 20,
+                        vertical: 16,
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      alignment: Alignment.center,
+                      child: Row(
+                        children: [
+                          Text(
+                            "${data['kondisi']}",
+                            style: const TextStyle(
+                                fontSize: 15,
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                )
               ],
             ),
             const SizedBox(height: 20),
-            _buildDetailRow("Sensor ID:", data['sensorid'].toUpperCase()),
-            _buildDetailRow("Water Level:", "${data['water_level']} cm"),
-            _buildDetailRow("Latitude:", data['latitude']),
-            _buildDetailRow("Longitude:", data['longitude']),
-            _buildDetailRow("Created At:", data['created_at']),
-            _buildClickableRow("Lokasi:", data['lokasi']),
           ],
         ),
       ),
