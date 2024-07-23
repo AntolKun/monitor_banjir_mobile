@@ -199,8 +199,8 @@ class _MapsPageState extends State<MapsPage> {
             height: 130,
             child: ClipRRect(
               borderRadius: BorderRadius.circular(10.0),
-              child: Image.network(
-                'https://images.unsplash.com/photo-1606089397043-89c1758008e0?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDEyMHx6c01WalRMU2tlUXx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60',
+              child: Image.asset(
+                'assets/images/banjir.jpg',
                 fit: BoxFit.cover,
               ),
             ),
